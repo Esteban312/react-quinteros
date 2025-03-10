@@ -1,0 +1,36 @@
+.cart-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+.carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: rgb(241, 36, 36);
+    color: white;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart-img{
+    width: 30px;
+}
+
+@media (max-width: 480px){
+
+    .cart-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-img{
+        width: 70%;
+        margin-right: 10px;
+    }
+}

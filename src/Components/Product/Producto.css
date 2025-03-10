@@ -1,0 +1,16 @@
+h4{
+    font-size: 20px;
+    text-align: center;
+}
+
+.card{
+    margin: 30px 0;
+    transition: 0.2s;
+}
+.card:hover{
+    transform: translate(0, -5px);
+}
+
+.card-text{
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+header{
+    display: flex;
+    background-color: rgb(230, 230, 230);
+    align-items: center;
+}
+
+.nav-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 30px;
+}
+
+.logo-header{
+    margin-left: 20px;
+    height: 55px;
+}
+@media (max-width: 479px){
+    .nav-cart{
+        margin: 0;
+        flex-grow: 0;
+    }
+}
