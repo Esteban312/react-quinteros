@@ -9,3 +9,9 @@ main{
     display: flex;
     gap: 40px;
 }
+
+@media (max-width: 480px){
+    .product-container{
+        flex-direction: column;
+    }
+}
