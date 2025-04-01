@@ -19,8 +19,14 @@ main{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    min-height: 70vh;
+    justify-items: center;
+    align-items: center;
+    margin: 40px 0;
 }
-
+.product-container .loading{
+    grid-column: 2;
+}
 @media (max-width: 885px){
     .product-container{
         grid-template-columns: 1fr 1fr;

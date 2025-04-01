@@ -18,6 +18,12 @@
     box-shadow: none;
     background-color: rgb(35, 168, 44);
 }
+
+.seleccionarCantidad{
+    display: flex;
+    align-items: center;
+}
+
 .seleccionarCantidadContainer{
     display: flex;
     padding: 2px;

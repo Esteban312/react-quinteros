@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Button.css'
 
-function Button({stock, productTitle}){
+function Button({stock}){
 
     const [count, setCount]= useState(0);
 
@@ -18,11 +18,15 @@ function Button({stock, productTitle}){
     }
     
     return<>
-        <div className='seleccionarCantidadContainer'>
-            <button onClick={()=>cantidadSeleccionar("-")}>-</button>
-            <span className='cantidad'> {count} </span>
-            <button onClick={()=>cantidadSeleccionar("+")}>+</button>
+        <div className='seleccionarCantidad'>
+            <p>Disponibles: {stock}</p>
+            <div className='seleccionarCantidadContainer'>
+                <button onClick={()=>cantidadSeleccionar("-")}>-</button>
+                <span className='cantidad'> {count} </span>
+                <button onClick={()=>cantidadSeleccionar("+")}>+</button>
+            </div>
         </div>
+
         <button className='addToCart'>Añadir al carrito</button>
     </>
 }
