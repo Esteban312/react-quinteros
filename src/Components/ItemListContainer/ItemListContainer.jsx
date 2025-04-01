@@ -1,18 +1,20 @@
 import Producto from '../Product/Producto'
+import productList from './product-list'
 
 function ItemListContainer({greetings}) {
 
     return (
-        <>
+        <main>
             <section>
                 <h1>{greetings}</h1>
             </section>
             <section className='product-container'>
-                <Producto imgProducto={'/product-piano.jpg'} productTitle='Piano Vertical Marrón' precio='$200000'/>
-                <Producto imgProducto={'/product-drum.jpg'} productTitle='Bateria completa' precio='$350000'/>
-                <Producto imgProducto={'/producto-guitar.jpg'} productTitle='Guitarra electrica' precio='$100000'/>
+
+                {productList.map(el=>(
+                    <Producto key={el.id} productList={el}/>
+                ))}
             </section>
-        </>
+        </main>
     )
     }
     

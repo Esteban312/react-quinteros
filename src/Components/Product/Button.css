@@ -1,4 +1,4 @@
-button{
+.addToCart{
     border: 0;
     background-color: rgb(24, 134, 32);
     width: 100%;
@@ -6,13 +6,39 @@ button{
     color: white;
     margin: 0 auto;
     border-radius: 3px;
+    transition: 0.2s;
 }
 
-button:hover{
+.addToCart:hover{
     box-shadow: 0px 2px 5px black;
     transform: translate(0,-2px);
 }
-button:active {
+.addToCart:active {
     transform: translate(0,2px);
     box-shadow: none;
+    background-color: rgb(35, 168, 44);
+}
+.seleccionarCantidadContainer{
+    display: flex;
+    padding: 2px;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+    margin: 1rem auto;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(232, 232, 232), rgb(188, 188, 188));
+}
+.seleccionarCantidadContainer button{
+    border: 0;
+    background-color: rgb(70, 70, 70);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.seleccionarCantidadContainer button:active{
+    transform: scale(1.1);
+    background-color: rgb(94, 94, 94);
 }
