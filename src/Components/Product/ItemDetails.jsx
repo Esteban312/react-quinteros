@@ -1,15 +1,13 @@
-import { Link, useParams } from 'react-router';
-import './ItemDetails.css'
-import Button from './Button'
 import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router';
 import { fetchData } from '../../fetchData';
+import Button from './Button'
 import Loader from '../ItemListContainer/Loader';
+import './ItemDetails.css'
 
 function ItemDetails(){
 
     const {id} = useParams()
-
-    // const {imgProducto, productTitle, precio, stock, categoria, descripcion} = productList;
     
     const [load, setLoad] = useState(true);
     const [producto, setProducto] = useState({})
@@ -52,7 +50,7 @@ function ItemDetails(){
                     setCount={setCount} 
                 />
             <Link to="/" className='volverAtras'>
-                <p>Volver atras</p>
+                <p>Volver al inicio</p>
             </Link>
             </div>
 
