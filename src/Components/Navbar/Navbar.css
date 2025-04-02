@@ -7,8 +7,9 @@ nav ul li{
     margin: 10px 10px 10px 0px;
     cursor: pointer;
     font-weight: bolder;
+    color: black;
 }
 
 nav ul li:hover{
-    color: rgb(230, 30, 30);
+    color: rgb(230, 30, 30);;
 }

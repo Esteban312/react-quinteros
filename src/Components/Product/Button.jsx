@@ -1,22 +1,18 @@
-import { useState } from 'react'
 import './Button.css'
 
-function Button({stock}){
+function Button({stock, count, setCount}){
 
-    const [count, setCount]= useState(0);
-
-    const cantidadSeleccionar=(operator)=>{
-        if(operator==="+"){
-            if(count < stock){
-                setCount(count + 1)
-            }
-        }else{
-            if(count < stock+1 && count > 0){
-                setCount(count - 1)
-            }
-        }
-    }
     
+
+    const cantidadSeleccionar = (operator) => {
+        if (operator === "+" && count < stock) {
+            setCount(count + 1);
+        } else if (operator === "-" && count > 0) {
+            setCount(count - 1);
+        }
+    };
+
+
     return<>
         <div className='seleccionarCantidad'>
             <p>Disponibles: {stock}</p>

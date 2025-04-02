@@ -2,13 +2,11 @@ import { useEffect, useState } from 'react'
 import Producto from '../Product/Producto'
 import Loader from "./Loader"
 import { fetchData } from '../../fetchData';
-import ItemDetails from '../Product/ItemDetails';
 
 function ItemListContainer({greetings}) {
 
     const [load, setLoad] = useState(true);
     const [cargaProductos, setCargaProductos] = useState(null)
-    const [productoFiltrado, setProductoFiltrado] = useState(null)
     
 
     useEffect(()=>{
@@ -35,15 +33,12 @@ function ItemListContainer({greetings}) {
                 <Loader/>
                 :
                 cargaProductos.map(el=>(
-                    <Producto key={el.id} productList={el} filtrar={setProductoFiltrado}/>
+                    <Producto key={el.id} productList={el}/>
                 ))
                 }
 
                 
             </section>
-            {
-                productoFiltrado && <ItemDetails productList={productoFiltrado}/>
-            }
         </main>
     )
     }

@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router'
 import './App.css'
 import Header from './Components/Body/Header'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+import ItemDetails from './Components/Product/ItemDetails'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<ItemListContainer greetings={"Bienvenidos a PianoCenter"}/>}/>
+        <Route path="/detalles/:id" element={<ItemDetails />} />
       </Routes>
     </BrowserRouter>
   )
