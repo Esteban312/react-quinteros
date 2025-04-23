@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path="/" element={<ItemListContainer greetings={"Bienvenidos a PianoCenter"}/>}/>
+        <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/categoria/:categoria" element={<ItemListContainer greetings={"Categorias"}/>}/>
         <Route path="/detalles/:id" element={<ItemDetails />} />
         <Route path="/contacto" element={<CustomForm/>} />

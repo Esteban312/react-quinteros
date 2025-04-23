@@ -1,59 +1,35 @@
-import { useEffect, useState } from 'react'
-import { fetchData } from '../../fetchData';
 import { useParams } from 'react-router';
-import Producto from '../Product/Producto'
-import Loader from "./Loader"
+import useProductos from "../../useProductos";
+import Producto from '../Product/Producto';
+import Loader from "./Loader";
 
-function ItemListContainer({greetings}) {
+function ItemListContainer() {
+  const { categoria } = useParams();
+  const { productos, loading, error } = useProductos();
 
-    const [load, setLoad] = useState(true);
-    const [cargaProductos, setCargaProductos] = useState(null)
-    
-    const {categoria} = useParams()
+  const productosFiltrados = categoria
+    ? productos.filter(el => el.categoria === categoria)
+    : productos;
 
-    useEffect(()=>{
+  return (
+    <main>
+      <section>
+        <h1>Bienvenidos a PianoCenter</h1>
+      </section>
 
-        if(!cargaProductos){
-            fetchData(true)
-            .then(response =>{
-                setCargaProductos(response)
-                setLoad(false)
-            })
-            .catch(error => console.error(error))
-        }
-    },[categoria])
+      <section className='product-container'>
+        {loading ? (
+          <Loader />
+        ) : error ? (
+          <p>Ocurrió un error al cargar los productos.</p>
+        ) : (
+          productosFiltrados.map(el => (
+            <Producto key={el.id} productList={el} />
+          ))
+        )}
+      </section>
+    </main>
+  );
+}
 
-
-    return (
-        <main>
-            <section>
-                <h1>{greetings}</h1>
-            </section>
-
-            <section className='product-container'>
-
-                {
-                load ?
-                <Loader/>
-                :
-
-                categoria ?
-                cargaProductos.filter(el => el.categoria===categoria).map(el=>(
-                    <Producto key={el.id} productList={el}/>
-                ))
-
-                :
-
-                cargaProductos.map(el=>(
-                    <Producto key={el.id} productList={el}/>
-                ))
-                }
-
-                
-            </section>
-        </main>
-    )
-    }
-    
-    export default ItemListContainer
-    
+export default ItemListContainer;
