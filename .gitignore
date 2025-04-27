@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Ignorar archivos específicos
+product-lis.js
+fetcehData.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

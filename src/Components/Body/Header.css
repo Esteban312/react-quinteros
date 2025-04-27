@@ -16,7 +16,7 @@ header{
     margin-left: 20px;
     height: 55px;
 }
-@media (max-width: 479px){
+@media (max-width: 500px){
     .nav-cart{
         margin: 0;
         flex-grow: 0;

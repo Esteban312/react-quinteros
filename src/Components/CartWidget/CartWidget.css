@@ -22,7 +22,7 @@
     width: 30px;
 }
 
-@media (max-width: 480px){
+@media (max-width: 500px){
 
     .cart-section{
         flex-direction: column;

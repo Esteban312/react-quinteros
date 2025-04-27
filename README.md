@@ -1,3 +1,36 @@
+# Piano Center
+
+**Piano Center** es una tienda en línea de instrumentos musicales desarrollada con **React** y **Firebase**. El proyecto es una **Single Page Application (SPA)** y está desplegado en **Netlify**.
+
+Visita el proyecto en: [pianocenter.netlify.app](https://pianocenter.netlify.app/)
+
+## Funcionalidades
+
+- **Lista de productos**: Muestra productos musicales cargados desde **Firebase**.
+- **Detalles de producto**: Al hacer clic en un producto, puedes ver más información (nombre, precio, descripción, etc.).
+- **Carga masiva de productos**: Los productos se cargan automáticamente desde un archivo y se guardan en Firebase.
+- **Diseño responsivo**: La app se adapta a dispositivos móviles, tabletas y escritorios.
+- **Futuro**: Se implementará un carrito de compras con **React Context**.
+
+## Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/Esteban312/piano-center.git
+   cd piano-center
+
+2. Instala las dependencias:
+
+    npm install
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
