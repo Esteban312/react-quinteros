@@ -1,34 +1,34 @@
-// src/hooks/useProductos.js
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { database } from "./FirebaseConfig"; 
+import { database } from "./FirebaseConfig";
 
-function useProductos() {
+const useProductos = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchProductos = async () => {
+    const obtenerProductos = async () => {
       try {
-        const productosCol = collection(database, "productos");
-        const productosSnapshot = await getDocs(productosCol);
-        const productosList = productosSnapshot.docs.map(doc => ({
+        const productosCollection = collection(database, "productos");
+        const snapshot = await getDocs(productosCollection);
+        const productosData = snapshot.docs.map(doc => ({
           id: doc.id,
           ...doc.data()
         }));
-        setProductos(productosList);
+        setProductos(productosData);
       } catch (err) {
+        console.error("Error obteniendo productos:", err);
         setError(err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchProductos();
+    obtenerProductos();
   }, []);
 
   return { productos, loading, error };
-}
+};
 
 export default useProductos;
