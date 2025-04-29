@@ -12,9 +12,11 @@ function ItemListContainer() {
     : productos;
 
   return (
+    
     <main>
       <section>
         <h1>Bienvenidos a PianoCenter</h1>
+        
       </section>
 
       <section className='product-container'>
@@ -25,6 +27,7 @@ function ItemListContainer() {
         ) : (
           productosFiltrados.map(el => (
             <Producto key={el.id} productList={el} />
+            
           ))
         )}
       </section>

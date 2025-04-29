@@ -10,7 +10,7 @@ function ItemDetails() {
     const { id } = useParams(); 
     const [load, setLoad] = useState(true);
     const [producto, setProducto] = useState({});
-    const [count, setCount] = useState(0);
+    
 
     useEffect(() => {
 
@@ -21,6 +21,7 @@ function ItemDetails() {
 
                 if (docSnap.exists()) {
                     setProducto({ id: docSnap.id, ...docSnap.data() });
+                
                 } else {
                     console.error('Producto no encontrado');
                 }
@@ -53,8 +54,6 @@ function ItemDetails() {
 
                     <Button
                         stock={producto.stock}
-                        count={count}
-                        setCount={setCount}
                     />
                     <Link to="/" className="volverAtras">
                         <p>Volver al inicio</p>
