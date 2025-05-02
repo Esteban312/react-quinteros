@@ -54,6 +54,9 @@ function ItemDetails() {
 
                     <Button
                         stock={producto.stock}
+                        title={producto.productTitle}
+                        img={producto.imgProducto}
+                        price={producto.precio}
                     />
                     <Link to="/" className="volverAtras">
                         <p>Volver al inicio</p>

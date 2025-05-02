@@ -48,3 +48,29 @@
     transform: scale(1.1);
     background-color: rgb(94, 94, 94);
 }
+
+
+.buttonsModal{
+    display: flex;
+    justify-content: space-evenly;
+}
+.modalConfirm{
+    border: 0;
+    background-color: rgb(24, 134, 32);
+    width: 20%;
+    height: 30px;
+    color: white;
+    margin: 0 auto;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+.modalCancel{
+    border: 0;
+    background-color: rgb(128, 132, 128);
+    width: 20%;
+    height: 30px;
+    color: white;
+    margin: 0 auto;
+    border-radius: 3px;
+    transition: 0.2s;
+}

@@ -1,7 +1,7 @@
 /* From Uiverse.io by Ali-Tahmazi99 */ 
 .loading {
     width: 60px;
-    height: 60px;
+    min-height: 70vh;
     position: relative;
   }
   

@@ -8,6 +8,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
     flex-grow: 1;
     margin: 0 30px;
 }
@@ -16,9 +17,24 @@ header{
     margin-left: 20px;
     height: 55px;
 }
+
+.cart-img{
+    width: 30px;
+}
+
 @media (max-width: 500px){
     .nav-cart{
         margin: 0;
         flex-grow: 0;
     }
+    .cart-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-img{
+        width: 70%;
+        margin-right: 10px;
+    }
 }
+

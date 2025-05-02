@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import Navbar from '../Navbar/Navbar'
-import  CartWidget from '../CartWidget/CartWidget'
+import  CartButton from '../CartWidget/CartButton'
 import './Header.css'
 
 function Header() {
@@ -12,7 +12,7 @@ return (
         
         <div className='nav-cart'>
             <Navbar/>
-            <CartWidget/>
+            <CartButton/>
         </div>
     </header>
     </>
